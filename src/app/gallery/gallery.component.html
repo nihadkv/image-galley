@@ -1,0 +1,12 @@
+<!-- <div class="container">
+  <div *ngFor="let item of [1, 2, 3, 4]">
+    <img src="assets/car1.jpg" alt="" />
+  </div>
+</div> -->
+
+<div class="container">
+  <div *ngFor="let image of images" (click)="onSelect(image.id)">
+    <img src="{{ env + image.attributes.image.data.attributes.url }}" alt="" />
+    <div>{{ image.attributes.title }}</div>
+  </div>
+</div>
